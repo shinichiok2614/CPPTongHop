@@ -1,0 +1,7 @@
+ctrl shift p: goi lenh
+goi lenh:
+    format document
+phan biet . va ->
+//Ctrl D : duplicate line
+//ctrl shift L : delete line
+//alt: move line

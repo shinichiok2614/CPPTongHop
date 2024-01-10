@@ -1,0 +1,50 @@
+#include <iostream>
+
+using namespace std;
+
+class Rectangle {
+private:
+    int width;
+    int height;
+
+public:
+    Rectangle();  // Default constructor
+    Rectangle(int, int);  // Constructor with parameters
+    Rectangle(const Rectangle &);  // Copy constructor
+    void setValues(int, int);
+    int area();
+};
+
+Rectangle::Rectangle() {
+    width = 0;
+    height = 0;
+}
+
+Rectangle::Rectangle(int w, int h) {
+    width = w;
+    height = h;
+}
+
+Rectangle::Rectangle(const Rectangle &source) {
+    width = source.width;
+    height = source.height;
+}
+
+void Rectangle::setValues(int w, int h) {
+    width = w;
+    height = h;
+}
+
+int Rectangle::area() {
+    return width * height;
+}
+
+int main() {
+    Rectangle rect1(5, 10);
+    Rectangle rect2(rect1);  // Call copy constructor to create a new object rect2 from rect1
+
+    cout << "The area of the rectangle 1 is " << rect1.area() << endl;
+    cout << "The area of the rectangle 2 is " << rect2.area() << endl;
+
+    return 0;
+}
